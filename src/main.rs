@@ -10,6 +10,26 @@ const COLOR_DARK_GROUND: Color = Color {
     g: 50,
     b: 150,
 };
+//Rectangle Struct
+#[derive(Clone, Copy, Debug)]
+struct Rect {
+    x1: i32,
+    y1: i32,
+    x2: i32,
+    y2: i32,
+}
+//Rectangle implementation
+impl Rect {
+    pub fn new(x: i32, y: i32, w: i32, h: i32) -> Self {
+        Rect {
+            x1: x,
+            y1: y,
+            x2: x + w,
+            y2: y + h,
+        }
+    }
+}
+
 struct Tcod {
     root: Root,
     con: Offscreen,
